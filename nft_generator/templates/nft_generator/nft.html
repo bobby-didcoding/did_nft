@@ -1,0 +1,51 @@
+
+{% extends 'nft_generator/base.html' %}
+ 
+{% block content %}
+
+        <div class="card">
+        <img src="{{object.image.url}}" alt="{{object.name}}" style="width:100%">
+        <p class="title">{{object.name}}</p>
+        <h1>Overall rarity = {{object.overall_rarity}}</h1>
+        
+        <table>
+            <tr>
+              <th>Trait</th>
+              <th>Rarity</th>
+            </tr>
+            <tr>
+              <td>Base image</td>
+              <td>{{object.base_rarity}}</td>
+            </tr>
+            <tr>
+              <td>Body</td>
+              <td>{{object.body_rarity}}</td>
+            </tr>
+            <tr>
+              <td>Hair</td>
+              <td>{{object.hair_rarity}}</td>
+            </tr>
+            <tr>
+              <td>Top</td>
+              <td>{{object.top_rarity}}</td>
+            </tr>
+            <tr>
+              <td>Pants</td>
+              <td>{{object.pants_rarity}}</td>
+            </tr>
+            <tr>
+              <td>Prop</td>
+              <td>{{object.prop_rarity}}</td>
+            </tr>
+            <tr>
+            <td>Bling</td>
+            <td>{{object.bling_rarity}}</td>
+            </tr>
+          </table>
+        <p><a class="back-to-all" href="{% url 'nft_generator:nfts' %}">View all</a></p>
+        </div>
+ 
+    
+ 
+{% endblock %}
+ 

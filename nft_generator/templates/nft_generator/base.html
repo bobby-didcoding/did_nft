@@ -1,0 +1,29 @@
+
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Did Coding NFT</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+  {% block extend_head %}
+  {% endblock %}
+ 
+</head>
+<body>
+ 
+<ul>
+  <li><a href="{% url 'nft_generator:home' %}">Home</a></li>
+  <li><a href="{% url 'nft_generator:nft-generator' %}">Gererate NFT</a></li>
+  <li style="float:right"><a href="{% url 'nft_generator:nfts' %}">View all</a></li>
+</ul>
+
+<div class="container">
+  {% block content %}
+  {% endblock %}
+</div>
+ 
+</body>
+</html>
