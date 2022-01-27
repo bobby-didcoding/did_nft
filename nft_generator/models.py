@@ -31,11 +31,6 @@ class NoneFungibleToken(TimeStampedModel,models.Model):
         return format(nft_qty / self.all_nfts(), '.2%')
 
     @property
-    def body_rarity(self):
-        nft_qty = NoneFungibleToken.objects.filter(nft_attributes__body = self.nft_attributes["body"]).count()
-        return format(nft_qty / self.all_nfts(), '.2%')
-
-    @property
     def hair_rarity(self):
         nft_qty = NoneFungibleToken.objects.filter(nft_attributes__hair = self.nft_attributes["hair"]).count()
         return format(nft_qty /self.all_nfts(), '.2%')

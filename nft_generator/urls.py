@@ -2,7 +2,7 @@
 from django.urls import path
 from . import views
  
-app_name = "nft-generator"
+app_name = "nft_generator"
  
 urlpatterns = [
     path('', views.HomeView.as_view(), name="home"),

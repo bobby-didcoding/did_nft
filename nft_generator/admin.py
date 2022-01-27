@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from picker import models as picker
+from .models import NoneFungibleToken
 
-@admin.register(picker.NoneFungibleToken)
+@admin.register(NoneFungibleToken)
 class NoneFungibleToken(admin.ModelAdmin):
     list_display = (
         'id',

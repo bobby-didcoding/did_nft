@@ -1,5 +1,5 @@
 
-{% extends 'nft-generator/base.html' %}
+{% extends 'nft_generator/base.html' %}
  
 {% block content %}
  
@@ -8,11 +8,11 @@
     <div class="row">
         {% for obj in page_obj %}
         <div class="column">
-            <a href="{% url 'nft-generator:nft' slug=obj.slug %}">
+            <a href="{% url 'nft_generator:nft' slug=obj.slug %}">
                 <div class="card">
                     <p class="title">{{obj.name}} --- {{obj.overall_rarity}}</p>
                     <img src="{{obj.image.url}}" alt="{{obj.name}}" style="width:75%">
-                    <p><a class="back-to-all" href="{% url 'nft-generator:nft' slug=obj.slug %}">View</a></p>
+                    <p><a class="back-to-all" href="{% url 'nft_generator:nft' slug=obj.slug %}">View</a></p>
                 </div>
             </a>
         </div>

@@ -19,14 +19,15 @@ This project will enable you to create NFT's using Python and Django
 8. Set up a virtual environment `python -m venv env`
 9. Activate virtual environment `cd env/scripts && activate && cd ../..`
 10. Install dependencies for your local environment by running `pip install -r requirements.txt`
-11. Run `python manage.py migrate`
-11. Run `python manage.py collectstatic`
+11. Run `python manage.py makemigrations`
+12. Run `python manage.py migrate`
+13. Run `python manage.py collectstatic`
 
 ### Fire up servers
-12. Open Ubuntu terminal and fire up a Redis server `redis-server`
-13. Open another Ubuntu and set up a Redis CLI `redis-cli`
-14. Open new cmd in root and use this command `celery -A nft.celery worker --pool=solo -l info` to fire up a celery worker
-15. Run `python manage.py runserver`
+14. Open Ubuntu terminal and fire up a Redis server `redis-server`
+15. Open another Ubuntu and set up a Redis CLI `redis-cli`
+16. Open new cmd in root and use this command `celery -A nft.celery worker --pool=solo -l info` to fire up a celery worker
+17. Run `python manage.py runserver`
 
 ### Production Setup with Docker
 1. Follow tutorial at https://didcoding.com/tutorial/create-nfts-using-django/

@@ -6,7 +6,7 @@ from django.conf.urls.static import static
  
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('picker.urls', namespace="picker")),
+    path('', include('nft_generator.urls', namespace="nft_generator")),
 ]
  
 if settings.DEBUG:

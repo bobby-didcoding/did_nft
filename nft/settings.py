@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'nft-generator',
+    'nft_generator',
     'django_extensions',
     'django_celery_results'
 ]
