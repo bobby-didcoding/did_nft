@@ -1,0 +1,22 @@
+
+{% extends 'nft-generator/base.html' %}
+ 
+{% block content %}
+ 
+    <form id="nft-form" method="POST" action="/nft-generator/">
+    {% csrf_token %}
+        <div class="container">
+            <h1>Generate NFT's</h1>
+            <p>How many NFT's would you like to generate.</p>
+            <hr>
+ 
+            <label for="quantity"><b>Quantity</b></label>
+            {{form.quantity}}
+ 
+            <hr>
+            <button type="submit" class="register btn">Generate</button>
+        </div>
+    </form>
+ 
+{% endblock %}
+ 
